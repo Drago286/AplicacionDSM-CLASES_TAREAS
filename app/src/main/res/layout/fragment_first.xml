@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="131dp"
+        android:layout_height="59dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ThirdButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/ThirdButton"
+        android:layout_width="135dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/third"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rad_group" />
+
+    <EditText
+        android:id="@+id/firstNumber"
+        android:layout_width="145dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:hint="@string/number1"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/secondNumber"
+        app:layout_constraintHorizontal_bias="0.658"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.069" />
+
+    <EditText
+        android:id="@+id/secondNumber"
+        android:layout_width="145dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="@string/number2"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtResultado"
+        android:layout_width="341dp"
+        android:layout_height="129dp"
+        android:layout_marginBottom="212dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate"
+        app:layout_constraintVertical_bias="0.921" />
+
+    <RadioGroup
+        android:id="@+id/rad_group"
+        android:layout_width="0dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/div_box"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rad_sum"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:text="@string/sum"
+            tools:layout_editor_absoluteY="-5dp" />
+
+        <RadioButton
+            android:id="@+id/rad_subtract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subtrac" />
+
+        <RadioButton
+            android:id="@+id/rad_multiply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multiply" />
+
+        <RadioButton
+            android:id="@+id/rad_divide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/divide" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/sum_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/sum"
+        app:layout_constraintBottom_toTopOf="@+id/sub_box"
+        app:layout_constraintStart_toStartOf="@+id/sub_box"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <CheckBox
+        android:id="@+id/sub_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="@string/subtrac"
+        app:layout_constraintStart_toStartOf="@+id/mult_box"
+        app:layout_constraintTop_toBottomOf="@+id/sum_box" />
+
+    <CheckBox
+        android:id="@+id/mult_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="@string/multiply"
+        app:layout_constraintStart_toStartOf="@+id/div_box"
+        app:layout_constraintTop_toBottomOf="@+id/sub_box" />
+
+    <CheckBox
+        android:id="@+id/div_box"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="63dp"
+        android:text="@string/divide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rad_group"
+        app:layout_constraintTop_toBottomOf="@+id/mult_box" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
