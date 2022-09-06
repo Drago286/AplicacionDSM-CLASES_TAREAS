@@ -18,6 +18,8 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.aplicacion3108.databinding.FragmentFirstBinding;
 import com.example.aplicacion3108.databinding.FragmentThirdBinding;
 
+import org.w3c.dom.Text;
+
 public class FirstFragment extends Fragment {
 
     private FragmentFirstBinding binding;
