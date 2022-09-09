@@ -53,6 +53,8 @@ public class FirstFragment extends Fragment {
         check_div = (CheckBox) binding.divBox;
 
 
+
+
         return binding.getRoot();
     }
 
