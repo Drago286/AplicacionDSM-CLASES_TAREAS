@@ -38,14 +38,21 @@ public class SecondFragment extends Fragment {
 
         String [] operations=
                 {
+                        "Selecciona una opcion:",
                         "Sumar",
                         "Restar",
                         "Multiplicar",
                         "Dividir",
                 };
-        ArrayAdapter<String>adapter = new ArrayAdapter<>(this.getContext(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,operations);
 
-        op_operation.setAdapter(adapter);
+        ArrayAdapter<String>adapter = new ArrayAdapter<>(this.getContext(),
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, operations);
+
+
+
+        op_operation.setAdapter(adapter));
+
+
 
 
         return binding.getRoot();
@@ -158,5 +165,6 @@ public class SecondFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 
 }
