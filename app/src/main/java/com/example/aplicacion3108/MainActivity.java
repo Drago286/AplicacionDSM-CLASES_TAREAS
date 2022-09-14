@@ -23,14 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
-    private Spinner operation_spinner;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        operation_spinner = findViewById(R.id.edited_spinner);
-
 
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());

@@ -47,11 +47,10 @@ public class SecondFragment extends Fragment {
                         "Dividir",
                 };
 
-        ArrayAdapter<Spinner> adapter = new ArrayAdapter<>(this.getContext(), R.layout.edited_spinner, op_operation);
+        //ArrayAdapter<Spinner> adapter = new ArrayAdapter<>(this.getContext(), R.layout.edited_spinner, op_operation);
 
-        //ArrayAdapter<String>adapter = new ArrayAdapter<>(EditedSpinnerBinding(),
-         //       androidx.appcompat.R.layout.ed, operations);
-
+        ArrayAdapter<String>adapter = new ArrayAdapter<>(this.getContext(),
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,operations);
 
 
         op_operation.setAdapter(adapter);
