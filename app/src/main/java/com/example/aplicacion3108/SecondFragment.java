@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.aplicacion3108.databinding.EditedSpinnerBinding;
 import com.example.aplicacion3108.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
@@ -20,6 +21,7 @@ public class SecondFragment extends Fragment {
     private FragmentSecondBinding binding;
     private EditText txt_number1, txt_number2, txt_res;
     private Spinner op_operation;
+
 
 
 
@@ -34,7 +36,7 @@ public class SecondFragment extends Fragment {
         txt_number1=(EditText) binding.numer1;
         txt_number2=(EditText)binding.editTextTextPersonName2;
         txt_res=(EditText)binding.responseTxt;
-        op_operation = (Spinner) binding.spinner;
+        op_operation = (Spinner) binding.editedSpinner;
 
         String [] operations=
                 {
@@ -45,12 +47,14 @@ public class SecondFragment extends Fragment {
                         "Dividir",
                 };
 
-        ArrayAdapter<String>adapter = new ArrayAdapter<>(this.getContext(),
-                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, operations);
+        ArrayAdapter<Spinner> adapter = new ArrayAdapter<>(this.getContext(), R.layout.edited_spinner, op_operation);
+
+        //ArrayAdapter<String>adapter = new ArrayAdapter<>(EditedSpinnerBinding(),
+         //       androidx.appcompat.R.layout.ed, operations);
 
 
 
-        op_operation.setAdapter(adapter));
+        op_operation.setAdapter(adapter);
 
 
 
@@ -102,6 +106,8 @@ public class SecondFragment extends Fragment {
                 }
             }
         });
+
+
 
 
 
